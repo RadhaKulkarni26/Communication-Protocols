@@ -7,12 +7,12 @@ Communication Protocols are set of rules and syntax that allow two or more commu
 - Full Form: Universal Asynchronous Receiver Transmitter.
 - UART is a communication protocol which will allow data to transmit and receive data serially.
 - As the name suggest (Asynchronous), we do not use any clock cycle for data transmission and reception.
-- Figure 1 shows basic block diagram of communication through UART.
+- Below shows basic block diagram of communication through UART.
    ![Figure 1](https://user-images.githubusercontent.com/70748543/154222580-74090567-730c-4ebe-8377-dbc025a5686e.jpeg)
 
 - We use only two wires for communication.
 - As we don’t use any clock cycle, we need a package format for communication.
-- Figure 2 shows Basic Block Diagram of Package Format.
+- Below shows Basic Block Diagram of Package Format.
    ![Figure 2](https://user-images.githubusercontent.com/70748543/154222750-da2c1baf-716b-4ae3-a30b-430554d3784d.jpeg)
 
 ### - Working:
