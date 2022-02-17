@@ -2,7 +2,7 @@
 
 Communication Protocols are set of rules and syntax that allow two or more communication systems to transmit and receive data from one another.
 
-
+***
 ## 1] UART
 - Full Form: Universal Asynchronous Receiver Transmitter.
 - UART is a communication protocol which will allow data to transmit and receive data serially.
@@ -84,6 +84,11 @@ Communication Protocols are set of rules and syntax that allow two or more commu
 2] Doesn’t support multi-master and multi-slave systems.
 
 3] We get less speed as compared to parallel communication.
+
+***
+
+## 2] I2C
+
 
 
 
