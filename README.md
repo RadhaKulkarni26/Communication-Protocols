@@ -96,6 +96,7 @@ Communication Protocols are set of rules and syntax that allow two or more commu
 - I2C is synchronous communication protocol which uses clock cycle for data transmission and reception.
 
 - Below diagram shows basic block diagram of I2C.
+    ![Figure 6](https://user-images.githubusercontent.com/70748543/154634888-c50c4eb1-eec4-4427-b201-2ea08702e3c5.jpeg)
 
 - I2C uses only two wire (SDA and SCL) for communication.
 
@@ -110,6 +111,8 @@ Communication Protocols are set of rules and syntax that allow two or more commu
 - Working
 
   Consider we have single Master and 3 slaves as shown in figure below
+  ![Figure 7](https://user-images.githubusercontent.com/70748543/154634956-11ec17e2-a0db-4eeb-8f33-ac2e3ce55dff.jpeg)
+
   
    1] Start Condition: Initially to write data from master to slave we need to make SDA voltage HIGH to LOW and then SCL voltage HIGH to LOW.
   
