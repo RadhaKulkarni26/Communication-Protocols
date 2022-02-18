@@ -1,22 +1,22 @@
 # COMMUNICATION PROTOCOLS – UART, I2C, SPI
 
-Communication Protocols are a set of rules and syntax that allow two or more communication systems to transmit and receive data from one another.
+**Communication Protocols** are a set of rules and syntax that allow two or more communication systems to transmit and receive data from one another.
 
 ## 1] UART
-- Full Form: Universal Asynchronous Receiver Transmitter.
+- **Full Form:** Universal Asynchronous Receiver Transmitter.
 - UART is a communication protocol that will allow data to transmit and receive data serially.
 - As the name suggests (Asynchronous), we do not use any clock cycle for data transmission and reception.
 - Below shows the basic block diagram of communication through UART.
    ![Figure 1](https://user-images.githubusercontent.com/70748543/154222580-74090567-730c-4ebe-8377-dbc025a5686e.jpeg)
 
-- We use only two wires for communication.
+- We use only **two** wires for communication.
 - As we don’t use any clock cycle, we need a package format for communication.
 - Below shows the Basic Block Diagram of Package Format.
    ![Figure 2](https://user-images.githubusercontent.com/70748543/154222750-da2c1baf-716b-4ae3-a30b-430554d3784d.jpeg)
 
 ### - Working:
 
-1] Consider data sequence “10010101”
+1] Consider data sequence **“10010101”**
 
 2] Initially the data bus is at High voltage, so to indicate the start and stop of data we increase or decrease the voltage level  
     START and STOP bit.
@@ -41,15 +41,15 @@ Communication Protocols are a set of rules and syntax that allow two or more com
 
 - In UART, data format and transmission speeds are configurable. 
 
-- BAUD RATE: It is the rate of data transfer in serial communication. Expressed in bits per second (bps).
+- **BAUD RATE:** It is the rate of data transfer in serial communication. Expressed in bits per second (bps).
 
 - Depending on the Application, UART can be configured in 3-ways:
 
-  1] Simplex: One way communication
+  **1] Simplex:** One way communication
   
-  2] Half Duplex: Communication can happen in both directions but not at the same time.
+  **2] Half Duplex:** Communication can happen in both directions but not at the same time.
   
-  3] Full Duplex: Communication can happen in both directions at the same time.
+  **3] Full Duplex:** Communication can happen in both directions at the same time.
   ![Figure 5](https://user-images.githubusercontent.com/70748543/154223122-1ef7c799-2ff9-4354-a254-4ab26f4c3f9b.jpeg)
 
 - Since Full duplex operations require characters to be sent and received at the same time UART uses two different shift registers for transmitted and received characters.
@@ -88,7 +88,7 @@ Communication Protocols are a set of rules and syntax that allow two or more com
 
 ## 2] I2C
 
-- Full Form: Inter Integrated Circuit
+- **Full Form:** Inter Integrated Circuit
 
 - I2C is a Serial Communication protocol in which data is transferred bit by bit using a single wire (SDA).
 
@@ -99,23 +99,23 @@ Communication Protocols are a set of rules and syntax that allow two or more com
 
 - I2C uses only two wire (SDA and SCL) for communication.
 
-  1] SDA – Serial Data Line is used to read/write data between two or more communication systems namely Master and Slave.
+  **1] SDA** – Serial Data Line is used to read/write data between two or more communication systems namely Master and Slave.
   
-  2] SCL – Serial Clock Line is used to control clock cycle from Master to Slave.   
+  **2] SCL** – Serial Clock Line is used to control clock cycle from Master to Slave.   
 
 - We can have multiple Master and Slave in I2C Communication Protocol.
 
-- Acknowledge Bit will be sent by the receiver to the transmitter to confirm that data frame or characters have been delivered successfully.
+- **Acknowledge Bit** will be sent by the receiver to the transmitter to confirm that data frame or characters have been delivered successfully.
 
-- Working
+- **Working**
 
   Consider we have a single Master and 3 slaves as shown in the figure below
   ![Figure 7](https://user-images.githubusercontent.com/70748543/154634956-11ec17e2-a0db-4eeb-8f33-ac2e3ce55dff.jpeg)
 
   
-   1] Start Condition: Initially, to write data from master to slave we need to make SDA voltage HIGH to LOW and then SCL voltage HIGH to LOW.
+   **1] Start Condition:** Initially, to write data from master to slave we need to make SDA voltage HIGH to LOW and then SCL voltage HIGH to LOW.
   
-   2] Slave Address + R/W bit: Consider, each slave will have its unique slave address.
+   **2] Slave Address + R/W bit:** Consider, each slave will have its unique slave address.
    
         - Slave 1: 0000001
         
@@ -129,14 +129,14 @@ Communication Protocols are a set of rules and syntax that allow two or more com
       
     Consider we need to write data to slave 3 so Master will send W+0000011 to all 3 slaves.
    
-   3] Acknowledge Bit: Each slave will then compare address 0000011 with its unique slave address, if they are the same it will send Acknowledge Bit back to Master.
+   **3] Acknowledge Bit:** Each slave will then compare address 0000011 with its unique slave address, if they are the same it will send Acknowledge Bit back to Master.
                        Acknowledge bit will be sent by lowering the SDA voltage by 1 bit.
 
-   4] Master Send/Receiver: Master will then send data to respective slave in form of a Data frame.
+   **4] Master Send/Receiver:** Master will then send data to respective slave in form of a Data frame.
    
-   5] For every data frame received acknowledge bit will be sent by the receiver.
+   **5] For every data frame received acknowledge bit will be sent by the receiver.**
    
-   6] Stop Condition: After receiving complete data we will make SCL voltage LOW to HIGH and then SDA HIGH to LOW.
+   **6] Stop Condition:** After receiving complete data we will make SCL voltage LOW to HIGH and then SDA HIGH to LOW.
 
 - I2C is a Half Duplex Communication Protocol
 
@@ -146,7 +146,7 @@ Communication Protocols are a set of rules and syntax that allow two or more com
 
 ## 3] SPI
 
-- Full Form: Serial Peripheral Interface
+- **Full Form:** Serial Peripheral Interface
 
 - SPI is nothing but Synchronous Serial Communication Interface,
 
@@ -154,13 +154,13 @@ Communication Protocols are a set of rules and syntax that allow two or more com
 
 - It will transmit and receive data using 4 wires.
    
-   1] MOSI: Master out slave in
+   **1] MOSI:** Master out slave in
    
-   2] MISO: Master in slave out
+   **2] MISO:** Master in slave out
    
-   3] SCLK: Serial clock
+   **3] SCLK:** Serial clock
    
-   4] SS bar: Slave select
+   **4] SS bar:** Slave select
 
 - It can have a single Master and multiple slaves.
 
@@ -171,22 +171,22 @@ Communication Protocols are a set of rules and syntax that allow two or more com
 
 - The two most commonly used configurations are:
    
-  1] Independent slave configuration: It will have individual slave select pins for each slave.
+  **1] Independent slave configuration:** It will have individual slave select pins for each slave.
      Below diagram shows the Block Diagram of Independent Slave Configuration.
      ![Figure 9](https://user-images.githubusercontent.com/70748543/154646111-e60898ab-856f-4a22-b6b1-046f6a047860.jpeg)
 
-  2] Daisy Chain Configuration:
+  **2] Daisy Chain Configuration:**
     ![Figure 10](https://user-images.githubusercontent.com/70748543/154646206-dbdbd8d7-f121-422f-8986-afaa3d029ae5.jpeg)
 
     Here, we have the same slave select for all slaves but the MISO of 1st slave will be connected to the MOSI to 2nd till the last slave and then MISO of last slave will be given as MISO of the master. 
 
-- Advantages:
+### - Advantages:
  
  1] It can perform Full Duplex operation as we have separate MISO and MOSI lines.
  
  2] No use of start and stop bit, hence data can be interfaced continuously.
 
-- Disadvantages:
+### - Disadvantages:
 
  1] Use of 4 wires ,unlike I2C and SPI.
  
