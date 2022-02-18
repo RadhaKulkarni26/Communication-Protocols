@@ -89,6 +89,57 @@ Communication Protocols are set of rules and syntax that allow two or more commu
 
 ## 2] I2C
 
+- Full Form: Inter Integrated Circuit
+
+- I2C is a Serial Communication protocol in which data is transferred bit by bit using single wire (SDA).
+
+- I2C is synchronous communication protocol which uses clock cycle for data transmission and reception.
+
+- Below diagram shows basic block diagram of I2C.
+
+- I2C uses only two wire (SDA and SCL) for communication.
+
+  1] SDA – Serial Data Line is used to read/write data between two or more communication systems namely Master and Slave.
+  
+  2] SCL – Serial Clock Line is used to control clock cycle from Master to Slave.   
+
+- We can have multiple Master and Slave in I2C Communication Protocol.
+
+- Acknowledge Bit will be send by receiver to transmitter to confirm that data frame or characters have delivered successfully.
+
+- Working
+
+  Consider we have single Master and 3 slaves as shown in figure below
+  
+   1] Start Condition: Initially to write data from master to slave we need to make SDA voltage HIGH to LOW and then SCL voltage HIGH to LOW.
+  
+   2] Slave Address + R/W bit: Consider, each slave will have its own unique slave address.
+   
+        - Slave 1: 0000001
+        
+        - Slave 2: 0000010
+        
+        - Slave 3: 0000011
+      
+    Each slave will then be connected to same clock pulse through SCL pin.
+      
+    Then, Master will send W/R bit + required Slave address to all 3 slaves through SDA line.
+      
+    Consider we need to write data to slave 3 so Master will send W+0000011 to all 3 slaves.
+   
+   3] Acknowledge Bit: Each slave will then compare address 0000011 with its unique slave address, if they are same it will send Achnowledge Bit back to Master.
+                       Acknowledge bit will be send by lowering the SDA voltage by 1 bit.
+
+   4] Master Send/Receiver: Master will then send data to respective slave in form of Data frame.
+   
+   5] For every data frame received acknowledge bit will be send by the receiver.
+   
+   6] Stop Condition: After receiving complete data we will make SCL voltage LOW to HIGH and then SDA HIGH to LOW.
+
+- I2C is a Half Duplex communication Protocol
+
+- Typical Voltage used are +5V or +3.3V.
+
 
 
 
